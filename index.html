@@ -132,7 +132,7 @@
           KARMA impulsa transacciones rápidas, transparentes e inmutables dentro de la red Polygon con tarifas de gas ultra bajas.
         </p>
 
-        <!-- Botones de Acción (Incluyendo Grupo de Telegram destacado) -->
+        <!-- Botones de Acción -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
           <a href="https://dapp.quickswap.exchange/#/swap?type=best&from=ETH&to=0x52971D61ED894dB6406A452B8A015E554BF58bAf&chainId=137" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-semibold shadow-lg shadow-purple-600/30 hover:shadow-purple-600/50 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3">
             <i class="fa-solid fa-right-left"></i>
@@ -202,46 +202,60 @@
         </div>
       </section>
 
-      <!-- Tokenomics -->
+      <!-- Tokenomics con Barras Interactivas (Hover Effect) -->
       <section id="tokenomics" class="space-y-8 pt-6">
         <div class="text-center space-y-2">
           <h2 class="text-3xl font-bold">Distribución del Token (Tokenomics)</h2>
-          <p class="text-slate-400 text-sm">Distribución transparente planificada para el desarrollo y la comunidad</p>
+          <p class="text-slate-400 text-sm">Pasa el cursor sobre las barras para interactuar con la distribución</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 space-y-4">
-            <div class="flex justify-between items-center">
-              <span class="text-slate-300 font-medium">Pool de Liquidez DEX</span>
-              <span class="text-purple-400 font-bold">50% (20M KARMA)</span>
-            </div>
-            <div class="w-full bg-slate-800 h-3 rounded-full overflow-hidden">
-              <div class="bg-purple-500 h-full rounded-full w-1/2"></div>
-            </div>
-
-            <div class="flex justify-between items-center pt-2">
-              <span class="text-slate-300 font-medium">Ecosistema y Recompensas</span>
-              <span class="text-indigo-400 font-bold">25% (10M KARMA)</span>
-            </div>
-            <div class="w-full bg-slate-800 h-3 rounded-full overflow-hidden">
-              <div class="bg-indigo-500 h-full rounded-full w-1/4"></div>
+          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 space-y-5">
+            
+            <!-- Barra 1: Liquidez -->
+            <div class="group cursor-pointer">
+              <div class="flex justify-between items-center mb-1">
+                <span class="text-slate-300 font-medium group-hover:text-purple-300 transition-colors">Pool de Liquidez DEX</span>
+                <span class="text-purple-400 font-bold">50% (20M KARMA)</span>
+              </div>
+              <div class="w-full bg-slate-800 h-3 rounded-full overflow-hidden p-0.5 border border-slate-700/50 group-hover:border-purple-500/50 transition-all">
+                <div class="bg-purple-500 h-full rounded-full w-1/2 group-hover:scale-x-105 group-hover:brightness-125 transition-all duration-300 origin-left"></div>
+              </div>
             </div>
 
-            <div class="flex justify-between items-center pt-2">
-              <span class="text-slate-300 font-medium">Desarrollo y Alianzas</span>
-              <span class="text-blue-400 font-bold">15% (6M KARMA)</span>
-            </div>
-            <div class="w-full bg-slate-800 h-3 rounded-full overflow-hidden">
-              <div class="bg-blue-500 h-full rounded-full w-[15%]"></div>
+            <!-- Barra 2: Ecosistema -->
+            <div class="group cursor-pointer pt-2">
+              <div class="flex justify-between items-center mb-1">
+                <span class="text-slate-300 font-medium group-hover:text-indigo-300 transition-colors">Ecosistema y Recompensas</span>
+                <span class="text-indigo-400 font-bold">25% (10M KARMA)</span>
+              </div>
+              <div class="w-full bg-slate-800 h-3 rounded-full overflow-hidden p-0.5 border border-slate-700/50 group-hover:border-indigo-500/50 transition-all">
+                <div class="bg-indigo-500 h-full rounded-full w-1/4 group-hover:scale-x-105 group-hover:brightness-125 transition-all duration-300 origin-left"></div>
+              </div>
             </div>
 
-            <div class="flex justify-between items-center pt-2">
-              <span class="text-slate-300 font-medium">Reserva del Creador</span>
-              <span class="text-emerald-400 font-bold">10% (4M KARMA)</span>
+            <!-- Barra 3: Desarrollo -->
+            <div class="group cursor-pointer pt-2">
+              <div class="flex justify-between items-center mb-1">
+                <span class="text-slate-300 font-medium group-hover:text-blue-300 transition-colors">Desarrollo y Alianzas</span>
+                <span class="text-blue-400 font-bold">15% (6M KARMA)</span>
+              </div>
+              <div class="w-full bg-slate-800 h-3 rounded-full overflow-hidden p-0.5 border border-slate-700/50 group-hover:border-blue-500/50 transition-all">
+                <div class="bg-blue-500 h-full rounded-full w-[15%] group-hover:scale-x-105 group-hover:brightness-125 transition-all duration-300 origin-left"></div>
+              </div>
             </div>
-            <div class="w-full bg-slate-800 h-3 rounded-full overflow-hidden">
-              <div class="bg-emerald-500 h-full rounded-full w-[10%]"></div>
+
+            <!-- Barra 4: Reserva -->
+            <div class="group cursor-pointer pt-2">
+              <div class="flex justify-between items-center mb-1">
+                <span class="text-slate-300 font-medium group-hover:text-emerald-300 transition-colors">Reserva del Creador</span>
+                <span class="text-emerald-400 font-bold">10% (4M KARMA)</span>
+              </div>
+              <div class="w-full bg-slate-800 h-3 rounded-full overflow-hidden p-0.5 border border-slate-700/50 group-hover:border-emerald-500/50 transition-all">
+                <div class="bg-emerald-500 h-full rounded-full w-[10%] group-hover:scale-x-105 group-hover:brightness-125 transition-all duration-300 origin-left"></div>
+              </div>
             </div>
+
           </div>
 
           <div class="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 flex flex-col justify-center space-y-4">
@@ -422,7 +436,5 @@
       }
     }
   </script>
-</body>
-</html>
 </body>
 </html>
